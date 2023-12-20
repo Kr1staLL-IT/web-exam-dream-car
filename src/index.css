@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #fff;
+    color: rgb(27, 12, 244);
+    font-family: 'Arvo', serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+.wrapper{ /*wrapper это основной класс для всех компонентов*/
+    width: 1280px;
+    margin: 50px auto;
+}
+header{
+    position: relative;
+}
+header .logo{
+    font-weight: 600;
+    font-size: 25px;
+}
+header ul.nav{
+    float: right;
+    list-style: none;
+}
+header ul.nav li{
+    display: inline;/*Чтобы были в одну строку*/
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 400ms ease;
+}
+header ul.nav li:hover{
+    opacity: 0.5;
+}
+header .basket-style{
+    float: right;
+    cursor: pointer;
+    transition: color 400ms ease;
+}
+header .basket-style:hover, header .basket-style.active{
+    color:rgb(207, 48, 48)
+}
+header .shop-car{
+    position: absolute;/*Что бы абсолют не шло во всей странице мы добавим классу header*/
+    top: 30px;
+    right: 0px;
+    width: 450px;
+    min-height: 100px;
+    background-color: #e6e5e5;
+    -webkit-box-shadow: 3px 5px 13px -8px #606161;
+    box-shadow: 3px 4px 13px -8px #606161;
+}
+header .shop-car .car{
+    width: 100%;
+    float: left;
+    margin-bottom: 14px;
+}
+header .shop-car .nothing{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+header .shop-car .car img{
+    width: 60px;
+    float: left;
+    margin-right: 20px;
+
+}
+header .shop-car .car h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+header .shop-car .car b{
+    color: green;
+    font-weight: 600;
+}
+header .shop-car .car .delete{
+    color:rgb(207, 48, 48);
+    float: right;
+    position: relative;
+    font-size: 20px;
+    top: -25px;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+header .shop-car .car .delete:hover{
+    color: rgb(207, 48, 48);
+    transform: scale(1.4);
+}
+header .general{
+    color: green;
+    font-weight: 600;
+}
+header .present{
+    margin: 50px 0;/*50px отступы сверху и снизу*/
+    background: url('./img/logo5.jpg') no-repeat; /*Логотип-5 фото iz салона mycar*/
+    width: 100%; 
+    height: 600px;/*Высота было более видным*/
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;/*Добавляем дополнительный стиль!*/
+    background-color: #a4a8b5;/*16 систепа числения добавтл чтобы было более насыщенным*/
+}
+header.present {
+    background: url('./img/logo5.jpg'); /*Логотип-5 фото iz салона mycar*/
+    position: relative;
+}
+header .present:after{
+    content: 'Приобрести машину вашей мечты легко!';
+    position: absolute;
+    top: 140px;
+    left: 48px;
+    width: 300px;
+    font-size: 35px;
+    font-weight: 600;
+    color: #d8e5e3;
+}
+header .present:before{
+    content: 'Купите машине ниже рынка!';
+    position: absolute;
+    top: 300px;
+    left: 48px;
+    width: 300px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #d8e5e3;
+}
+/*in here category style*/
+.categories div{
+    display: inline-block;
+    background: #e5e5f0;
+    border-radius: 45px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 400ms ease;
+}
+.categories div:hover{
+    border-color: #0a012f;
+    transform: scale(1.07);
+}
+/*here main block style*/
+main{
+    display: flex; /*Use display flex tecnhlogy*/
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+main .car{
+    width: 30%;
+    margin-bottom: 50px;
+    background-color: #d8e5e3;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 18px;
+}
+main .car img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 400ms ease;
+    position: relative;
+}
+main .car img:hover{
+    transform: scale(1.04);/*zoom to 1.04 coeficent*/
+}
+main h2, main p, main b{
+    margin: 10px 20px;
+    color: #333;
+}
+main b{
+    color: #529e5e
+}
+main .basket{
+    position: absolute;/*акцент идет на эту кнопку и я принимаю абсолют но будем отталкиватся от релетиве*/
+    right: 21px;
+    bottom: 25px;
+    background: #0a012f;
+    width: 35px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 400ms ease;
+}
+main .basket:hover{
+    transform: scale(1.6) translateY(-4px);
+}
+/*footer style*/
+footer{
+    text-align: center;
+    margin-top: 100px;
+}
